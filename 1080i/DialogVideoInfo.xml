@@ -1210,14 +1210,6 @@
                     <visible>!Skin.HasSetting(kioskmode)</visible>
                     <visible>[Container.Content(movies) | Container.Content(tvshows)] + system.hasaddon(script.artwork.downloader) + !substring(Container.FolderPath,plugin://)</visible>
                 </control>
-                <control type="button" id="22">
-                    <label>$LOCALIZE[31316]</label>
-                    <include>DialogVideoInfoButton</include>
-                    <onclick>ActivateWindow(1163)</onclick>
-                <visible>ControlGroup(5050).HasFocus</visible>
-                    <visible>!Skin.HasSetting(kioskmode)</visible>
-                    <visible>[Container.Content(tvshows) | Container.Content(movies)] + system.hasaddon(script.artwork.downloader) + !substring(Container.FolderPath,plugin://)</visible>
-                </control>
                 <control type="button" id="23">
                     <label>$LOCALIZE[31365]</label>
                     <include>DialogVideoInfoButton</include>
@@ -1233,24 +1225,7 @@
                  <visible>ControlGroup(5050).HasFocus</visible>
                    <visible>!Skin.HasSetting(kioskmode)</visible>
                     <visible>Container.Content(movies) + system.hasaddon(script.artwork.downloader)+ !substring(Container.FolderPath,plugin://)</visible>
-                </control>
-            <control type="button" id="5052">
-                    <label>Select Manually</label>
-                    <include>DialogVideoInfoButton</include>
-                 <visible>ControlGroup(5050).HasFocus</visible>
-                   <visible>!Skin.HasSetting(kioskmode)</visible> 
-                   <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-                <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
-            </control>
-            <control type="button" id="5053">
-                    <label>Auto-Download</label>
-                    <include>DialogVideoInfoButton</include>
-                 <visible>ControlGroup(5050).HasFocus</visible>
-                   <visible>!Skin.HasSetting(kioskmode)</visible>                    
-                <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-                <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-            </control>
-            
+                </control>            
             </control>
             </control>
  
