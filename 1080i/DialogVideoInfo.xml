@@ -598,6 +598,18 @@
                     <visible>!IsEmpty(ListItem.Art(discart))</visible>
                 </control>
 </control>
+                <control type="textbox">
+                    <posx>4</posx>
+                    <posy>536</posy>
+                    <width>470</width>
+                    <height>320</height>
+                    <visible>ControlGroup(5050).HasFocus</visible>
+                    <visible>![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
+                    <label fallback="31006">SOME EXPLANATION HOW STUFF WORKS WITH ARTWORK DOWNLOADER ETC[CR]BLABLA[CR]BLABLA[CR]BLABLA</label>
+                    <font>Font_Reg32</font>
+                    <pagecontrol>60</pagecontrol>
+                    <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+                </control>
                 <control type="grouplist">
                     <posx>-16</posx>
                     <posy>872</posy>
@@ -1134,7 +1146,7 @@
                 <orientation>horizontal</orientation>
                 <scrolltime tween="quadratic">200</scrolltime>
                 <control type="button" id="8">
-                    <label>$LOCALIZE[208]</label>
+                    <label>$VAR[VideoInfoPlayButtonLabelVar]</label>
                     <include>DialogVideoInfoButton</include>
                 </control>
                 <control type="button" id="9">
@@ -1164,13 +1176,19 @@
                     <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Label] Trailer,return)</onclick>
                     <visible>Container.Content(movies) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
                 </control>
+                <control type="button" id="441">
+                    <label>Play Theme</label>
+                    <include>DialogVideoInfoButton</include>
+                    <onclick>PlayMedia($INFO[ListItem.FileNameAndPath]/theme.mp3)</onclick>
+                    <visible>Container.Content(tvshows) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
+                </control>
                 <control type="button" id="6">
                     <label>$LOCALIZE[184]</label>
                     <include>DialogVideoInfoButton</include>
                     <visible>!Skin.HasSetting(kioskmode) + !substring(Container.FolderPath,plugin://)</visible>
                 </control>
            <control type="grouplist" id="5050">
-                <width>400</width>
+                <width>254.5</width>
                 <height>500</height>
                 <onleft>5000</onleft>
                 <onright>5000</onright>
