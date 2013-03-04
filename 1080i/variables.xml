@@ -1563,9 +1563,13 @@
     </variable>
     <!-- VideoInfo-->
     <variable name="ExtraFanartPreviewVar">
-        <value condition="ControlGroup(5000).HasFocus(21) + Container.Content(movies)">$INFO[ListItem.Path,,extrafanart/]</value>
-        <value condition="ControlGroup(5000).HasFocus(21) + Container.Content(tvshows)">$INFO[ListItem.FileNameAndPath,,extrafanart/]</value>
-        <value condition="ControlGroup(5000).HasFocus(24)">$INFO[ListItem.Path,,extrathumbs]</value>
+        <value condition="ControlGroup(5000).HasFocus(10) + Container.Content(movies)">$INFO[ListItem.Path,,extrafanart/]</value>
+        <value condition="ControlGroup(5000).HasFocus(10) + Container.Content(tvshows)">$INFO[ListItem.FileNameAndPath,,extrafanart/]</value>
+        <value condition="ControlGroup(5000).HasFocus(10)">$INFO[ListItem.Path,,extrathumbs]</value>
+    </variable>
+    <variable name="VideoInfoPlayButtonLabelVar">
+        <value condition="Container.Content(tvshows)">$LOCALIZE[502]</value>
+        <value>$LOCALIZE[208]</value>
     </variable>
     <!-- LowList-->
     <variable name="LowListInfoDetail3">
