@@ -1234,7 +1234,22 @@
                    <visible>!Skin.HasSetting(kioskmode)</visible>
                     <visible>Container.Content(movies) + system.hasaddon(script.artwork.downloader)+ !substring(Container.FolderPath,plugin://)</visible>
                 </control>
-            
+            <control type="button" id="5052">
+                    <label>Select Manually</label>
+                    <include>DialogVideoInfoButton</include>
+                 <visible>ControlGroup(5050).HasFocus</visible>
+                   <visible>!Skin.HasSetting(kioskmode)</visible> 
+                   <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+                <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
+            </control>
+            <control type="button" id="5053">
+                    <label>Auto-Download</label>
+                    <include>DialogVideoInfoButton</include>
+                 <visible>ControlGroup(5050).HasFocus</visible>
+                   <visible>!Skin.HasSetting(kioskmode)</visible>                    
+                <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+                <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+            </control>
             
             </control>
             </control>
@@ -1384,11 +1399,11 @@
                     <animation effect="zoom" start="1072,615,540,304" end="0,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
                 </control>
                 <control type="image">
-                    <posx>0</posx>
-                    <posy>608</posy>
+                    <posx>300</posx>
+                    <posy>20</posy>
                     <width>554</width>
                     <height>318</height>
-                    <aspectratio align="center">scale</aspectratio>
+                    <aspectratio align="center">keep</aspectratio>
                     <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
                     <fadetime>500</fadetime>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
