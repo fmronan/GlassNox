@@ -573,42 +573,18 @@
                     <textcolor>grey</textcolor>
                 </control>
                 <control type="group">
-                    <visible>!ControlGroup(5050).HasFocus</visible>
-                <control type="textbox">
-                    <posx>4</posx>
-                    <posy>536</posy>
-                    <width>1016</width>
-                    <height>320</height>
-                    <align>left</align>
-                    <label fallback="31006">$INFO[ListItem.Plot]</label>
-                    <font>Font_Reg32</font>
-                    <pagecontrol>60</pagecontrol>
-                    <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
-                    <visible>IsEmpty(ListItem.Art(discart))</visible>
-                </control>
-                <control type="textbox">
-                    <posx>4</posx>
-                    <posy>536</posy>
-                    <width>746</width>
-                    <height>320</height>
-                    <label fallback="31006">$INFO[ListItem.Plot]</label>
-                    <font>Font_Reg32</font>
-                    <pagecontrol>60</pagecontrol>
-                    <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
-                    <visible>!IsEmpty(ListItem.Art(discart))</visible>
-                </control>
-</control>
-                <control type="textbox">
-                    <posx>4</posx>
-                    <posy>536</posy>
-                    <width>470</width>
-                    <height>320</height>
-                    <visible>ControlGroup(5050).HasFocus</visible>
-                    <visible>![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
-                    <label fallback="31006">SOME EXPLANATION HOW STUFF WORKS WITH ARTWORK DOWNLOADER ETC[CR]BLABLA[CR]BLABLA[CR]BLABLA</label>
-                    <font>Font_Reg32</font>
-                    <pagecontrol>60</pagecontrol>
-                    <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+                    <visible>!ControlGroup(5000).HasFocus(10)</visible>
+                    <control type="textbox">
+                        <posx>4</posx>
+                        <posy>536</posy>
+                        <width>1016</width>
+                        <height>320</height>
+                        <align>left</align>
+                        <label fallback="31006">$INFO[ListItem.Plot]</label>
+                        <font>Font_Reg32</font>
+                        <pagecontrol>60</pagecontrol>
+                        <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+                    </control>
                 </control>
                 <control type="grouplist">
                     <posx>-16</posx>
@@ -1061,7 +1037,7 @@
             </control>
             <control type="spincontrol" id="60">
                 <posx>1820</posx>
-                <animation effect="slide" start="0,0" end="-260,0" time="0" condition="!IsEmpty(ListItem.Art(discart))">Conditional</animation>
+                <!--<animation effect="slide" start="0,0" end="-260,0" time="0" condition="!IsEmpty(ListItem.Art(discart))">Conditional</animation>-->
                 <posy>584</posy>
                 <width>50</width>
                 <height>88</height>
@@ -1069,7 +1045,7 @@
                 <onleft>5000</onleft>
                 <onright>5000</onright>
                 <ondown>5000</ondown>
-                <visible>!ControlGroup(5050).HasFocus</visible>
+                <visible>!ControlGroup(5000).HasFocus(10)</visible>
             </control>
             <control type="panel" id="50">
                 <posx>991</posx>
@@ -1142,7 +1118,7 @@
                 <onleft>5000</onleft>
                 <onright>5000</onright>
                 <onup>50</onup>
-                <ondown>5055</ondown>
+                <ondown>5050</ondown>
                 <orientation>horizontal</orientation>
                 <scrolltime tween="quadratic">200</scrolltime>
                 <control type="button" id="8">
@@ -1187,46 +1163,11 @@
                     <include>DialogVideoInfoButton</include>
                     <visible>!Skin.HasSetting(kioskmode) + !substring(Container.FolderPath,plugin://)</visible>
                 </control>
-           <control type="grouplist" id="5050">
-                <width>254.5</width>
-                <height>500</height>
-                <onleft>5000</onleft>
-                <onright>5000</onright>
-                <onup>5000</onup>
-                <ondown>5055</ondown>
-                <orientation>vertical</orientation>
-                <scrolltime tween="quadratic">200</scrolltime>
                 <control type="button" id="10">
                     <label>$LOCALIZE[13511]</label>
                     <include>DialogVideoInfoButton</include>
                     <visible>!Skin.HasSetting(kioskmode) + !substring(Container.FolderPath,plugin://)</visible>
-                </control>     
-                <control type="button" id="21">
-                    <label>$LOCALIZE[31467]</label>
-                    <include>DialogVideoInfoButton</include>
-                    <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
-                    <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
-                <visible>ControlGroup(5050).HasFocus</visible>
-                    <visible>!Skin.HasSetting(kioskmode)</visible>
-                    <visible>[Container.Content(movies) | Container.Content(tvshows)] + system.hasaddon(script.artwork.downloader) + !substring(Container.FolderPath,plugin://)</visible>
                 </control>
-                <control type="button" id="23">
-                    <label>$LOCALIZE[31365]</label>
-                    <include>DialogVideoInfoButton</include>
-                    <onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-                 <visible>ControlGroup(5050).HasFocus</visible>
-                    <visible>!Skin.HasSetting(kioskmode)</visible>
-                    <visible>Container.Content(tvshows) + system.hasaddon(script.tvtunes)</visible>
-                </control>
-                <control type="button" id="24">
-                    <label>$LOCALIZE[31468]</label>
-                    <include>DialogVideoInfoButton</include>
-                    <onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrathumbs)</onclick>
-                 <visible>ControlGroup(5050).HasFocus</visible>
-                   <visible>!Skin.HasSetting(kioskmode)</visible>
-                    <visible>Container.Content(movies) + system.hasaddon(script.artwork.downloader)+ !substring(Container.FolderPath,plugin://)</visible>
-                </control>            
-            </control>
             </control>
  
             <control type="image">
@@ -1313,9 +1254,6 @@
                 <include>TopbarPulseAnimationLeft</include>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             </control>
-            <control type="group">
-
-            </control>
             <control type="image">
                 <posx>780</posx>
                 <posy>555</posy>
@@ -1338,6 +1276,101 @@
                 <animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
                 <visible>Container(5000).HasNext+ ControlGroup(5000).HasFocus</visible>
             </control>
+
+            <control type="panel" id="5050">
+                <posx>829</posx>
+                <posy>604</posy>
+                <width>1080</width>
+                <height>320</height>
+                <onup>5000</onup>
+                <ondown>5000</ondown>
+                <orientation>horizontal</orientation>
+                <visible>ControlGroup(5000).HasFocus(10)</visible>
+                <itemlayout width="360" height="320">
+                    <control type="image">
+                        <posx>10</posx>
+                        <width>340</width>
+                        <height>320</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>500</fadetime>
+                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+                        <bordersize>7</bordersize>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="360" height="320">
+                    <control type="image">
+                        <posx>10</posx>
+                        <width>340</width>
+                        <height>320</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>500</fadetime>
+                        <bordertexture border="7">views/addonwall_select.png</bordertexture>
+                        <bordersize>7</bordersize>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <width>340</width>
+                        <height>320</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>500</fadetime>
+                        <bordersize>7</bordersize>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$VAR[VideoInfoThumbPreviewVar]</icon>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(fanart)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(fanart))</visible>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(landscape)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(landscape))</visible>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(banner)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(banner))</visible>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(clearlogo)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(clearlogo))</visible>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(clearart)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(clearart))</visible>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(discart)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(discart))</visible>
+                    </item>
+                    <item>
+                        <label>Thumb</label>
+                        <icon>$INFO[ListItem.Art(characterart)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>!IsEmpty(ListItem.Art(characterart))</visible>
+                    </item>
+                </content>
+            </control>
+            
         </control>
         <control type="group">
             <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
@@ -1352,139 +1385,9 @@
                         <control type="image">
                 <width>729</width>
                 <height>1080</height>
-                <animation effect="fade" start="0" end="100" time="400" condition="ControlGroup(5050).HasFocus">Conditional</animation>
-                <texture background="true">common/bgcolor.png</texture>
-            </control>
-                        <control type="image">
-                <width>729</width>
-                <height>1080</height>
-                <animation effect="fade" start="100" end="20" time="400" condition="ControlGroup(5050).HasFocus">Conditional</animation>
                 <texture background="true">$VAR[PosterVar]</texture>
             </control>
-                <control type="grouplist">
-                    <visible>ControlGroup(5050).HasFocus</visible>
-                    <orientation>vertical</orientation>
-                    <height>1080</height>
-                    <width>729</width>
-                    <usecontrolcoords>true</usecontrolcoords>
-                <animation effect="slide" start="-1000" end="0" tween="sine" time="600">VisibleChange</animation>
-                <control type="grouplist">
-                    <visible>ControlGroup(5050).HasFocus</visible>
-                    <orientation>horizontal</orientation>
-                    <height>400</height>
-                    <width>729</width>
-                    <usecontrolcoords>true</usecontrolcoords>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>30</posy>
-                    <width>350</width>
-                    <height>318</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <texture background="true">$VAR[VideoInfoThumbPreviewVar]</texture>
-                    <fadetime>500</fadetime>
-                    <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                    <bordersize>7</bordersize>
-                </control>
-                                <control type="image">
-                    <posy>30</posy>
-                    <width>354</width>
-                    <height>318</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-                    <fadetime>500</fadetime>
-                    <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                    <bordersize>7</bordersize>
-                    <animation effect="zoom" start="1265,608,554,318" end="-25,-25,1970,1130" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
-                    <visible>!IsEmpty(ListItem.Art(fanart))</visible>
-                </control>
-                </control>
-                                <control type="image">
-                    <posx>17</posx>
-                    <width>615</width>
-                    <height>150</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(banner)]</texture>
-                    <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                    <bordersize>7</bordersize>
-                </control>
-                <control type="grouplist">
-                    <visible>ControlGroup(5050).HasFocus</visible>
-                    <orientation>horizontal</orientation>
-                    <height>280</height>
-                    <width>729</width>
-                <control type="multiimage">
-                    <posx>0</posx>
-                    <width>354</width>
-                    <height>318</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <imagepath background="true">$VAR[ExtraFanartPreviewVar]</imagepath>
-                    <fadetime>500</fadetime>
-                    <timeperimage>4000</timeperimage>
-                    <animation effect="zoom" start="1072,615,540,304" end="0,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
-                </control>
-<!--                 <control type="image">
-                    <posx>0</posx>
-                    <posy>610</posy>
-                    <width>550</width>
-                    <height>314</height>
-                    <texture border="6">views/addonwall_select.png</texture>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <visible>Control.HasFocus(5055)</visible>
-                    <animation effect="fade" time="160">VisibleChange</animation>
-                    <animation effect="slide" end="-200" condition="ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(24)">Conditional</animation>
-                    <animation type="Conditional" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">
-                        <effect type="zoom" start="1267,610,550,314" end="-5,-5,1930,1090" time="640" tween="cubic" />
-                        <effect type="fade" start="100" end="0" time="160" />
-                    </animation>
-                </control> -->
-                <control type="image">
-                    <width>355</width>
-                    <height>315</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-                </control>
-                </control>
-                <control type="grouplist">
-                    <visible>ControlGroup(5050).HasFocus</visible>
-                    <orientation>horizontal</orientation>
-                    <height>300</height>
-                    <width>729</width>
-                <control type="image">
-                    <posx>341</posx>
-                    <width>355</width>
-                    <height>280</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(clearart)]</texture>
-                </control>
-                <control type="image">
-                    <posx>682</posx>
-                    <width>350</width>
-                    <height>260</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(discart)]</texture>
-                </control>
-                </control>
-                <control type="image">
-                    <posx>17</posx>
-                    <posy>678</posy>
-                    <width>35</width>
-                    <height>315</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(landscape)]</texture>
-                    <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                    <bordersize>7</bordersize>
-                </control>
-                <control type="image">
-                    <posx>567</posx>
-                    <posy>573</posy>
-                    <width>230</width>
-                    <height>230</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(characterart)]</texture>
-                    <bordersize>7</bordersize>
-                </control>
-</control>
-            <control type="image">
+            <!--<control type="image">
                 <posx>1600</posx>
                 <posy>620</posy>
                 <width>300</width>
@@ -1501,7 +1404,7 @@
                         <effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="1750,770" end="-720" time="700" tween="quadratic" easing="out" />
                     </animation>
-            </control>
+            </control>-->
 
             <control type="image">
                 <posx>709</posx>
