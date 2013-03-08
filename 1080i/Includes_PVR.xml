@@ -745,12 +745,16 @@
                     </control>
                 </rulerlayout>
                 <channellayout height="70" width="450">
-                    <control type="image">
-                        <width>80</width>
+                    <control type="label">
+                        <posx>80</posx>
+                        <width>70</width>
                         <height>70</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                        <bordersize>3</bordersize>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <font>Font_Bold20</font>
+                        <textoffsetx>10</textoffsetx>
+                        <textcolor>$VAR[FontColorVar]</textcolor>
+                        <info>ListItem.ChannelNumber</info>
                     </control>
                     <control type="label">
                         <posx>80</posx>
@@ -762,16 +766,13 @@
                         <font>Font_Reg20</font>
                         <textcolor>grey2</textcolor>
                     </control>
-                    <control type="label">
-                        <posx>450</posx>
-                        <width>70</width>
+                    <control type="image">
+                        <posx>370</posx>
+                        <width>80</width>
                         <height>70</height>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>Font_Bold20</font>
-                        <textoffsetx>5</textoffsetx>
-                        <textcolor>$VAR[FontColorVar]</textcolor>
-                        <info>ListItem.ChannelNumber</info>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <bordersize>3</bordersize>
                     </control>
                 </channellayout>
                 <focusedchannellayout height="70" width="450">
@@ -782,12 +783,15 @@
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <bordersize>0,2,0,2</bordersize>
                     </control>
-                    <control type="image">
-                        <width>80</width>
+                    <control type="label">
+                        <posx>80</posx>
+                        <width>70</width>
                         <height>70</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                        <bordersize>3</bordersize>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <font>Font_Bold20</font>
+                        <textoffsetx>10</textoffsetx>
+                        <info>ListItem.ChannelNumber</info>
                     </control>
                     <control type="label">
                         <posx>80</posx>
@@ -798,15 +802,13 @@
                         <label>$INFO[ListItem.ChannelName]</label>
                         <font>Font_Reg20</font>
                     </control>
-                    <control type="label">
-                        <posx>450</posx>
-                        <width>70</width>
+                    <control type="image">
+                        <posx>370</posx>
+                        <width>80</width>
                         <height>70</height>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>Font_Bold20</font>
-                        <textoffsetx>5</textoffsetx>
-                        <info>ListItem.ChannelNumber</info>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <bordersize>3</bordersize>
                     </control>
                 </focusedchannellayout>
                 <itemlayout height="70" width="60">
