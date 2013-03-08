@@ -85,7 +85,7 @@
                     <texture>wall/wall_bg_reflection.png</texture>
                 </control>
                 <control type="group">
-                    <visible>Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13)</visible>
+                    <visible>Control.IsVisible(12) | Control.IsVisible(13)</visible>
                     <control type="image">
                         <posx>0</posx>
                         <posy>95</posy>
