@@ -704,7 +704,7 @@
     <include name="EPGTimelineView">
         <control type="group">
             <visible>Control.IsVisible(10)</visible>
-            <animation effect="slide" tween="cubic" easing="out" time="480" start="0,806" end="0,0">VisibleChange</animation>
+            <include>Animation_VisibleChange200</include>
             <!--<control type="group">
                 <control type="image">
                     <texture>views/list_filter.png</texture>
