@@ -758,7 +758,7 @@
                     </control>
                     <control type="label">
                         <posx>80</posx>
-                        <width>350</width>
+                        <width>290</width>
                         <height>70</height>
                         <textoffsetx>10</textoffsetx>
                         <aligny>center</aligny>
@@ -767,7 +767,7 @@
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="image">
-                        <posx>370</posx>
+                        <posx>360</posx>
                         <width>80</width>
                         <height>70</height>
                         <aspectratio>keep</aspectratio>
@@ -795,7 +795,7 @@
                     </control>
                     <control type="label">
                         <posx>80</posx>
-                        <width>350</width>
+                        <width>290</width>
                         <height>70</height>
                         <textoffsetx>10</textoffsetx>
                         <aligny>center</aligny>
@@ -803,7 +803,7 @@
                         <font>Font_Reg20</font>
                     </control>
                     <control type="image">
-                        <posx>370</posx>
+                        <posx>360</posx>
                         <width>80</width>
                         <height>70</height>
                         <aspectratio>keep</aspectratio>
