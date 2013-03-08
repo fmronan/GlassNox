@@ -817,7 +817,7 @@
                         <height>70</height>
                         <texture border="8">$INFO[ListItem.Property(GenreType),epg-genres/,.png]</texture>
                         <bordersize>2</bordersize>
-                        <animation effect="fade" start="100" end="40" time="40" condition="true">Conditional</animation>
+                        <animation effect="fade" start="100" end="40" time="0" condition="true">Conditional</animation>
                     </control>
                     <control type="label" id="1">
                         <posx>9</posx>
