@@ -789,7 +789,11 @@ msgctxt "#31244"
 msgid "Enable cdART in 'Now Playing' widget"
 msgstr ""
 
-#empty strings from id 31245 to 31247
+msgctxt "#31245"
+msgid "'Unwatched' flag"
+msgstr ""
+
+#empty strings from id 31246 to 31247
 
 msgctxt "#31248"
 msgid "BD/DVD Cases"
