@@ -276,72 +276,55 @@
         </control>
     </include>
     <include name="OverlayVisibility-7">
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
         <texture>$VAR[Overlay-7Var]</texture>
     </include>
     <include name="OverlayVisibility-6">
         <texture>$VAR[Overlay-6Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility-5">
         <texture>$VAR[Overlay-5Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility-4">
         <texture>$VAR[Overlay-4Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility-3">
         <texture>$VAR[Overlay-3Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility-2">
         <texture>$VAR[Overlay-2Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility-1">
         <texture>$VAR[Overlay-1Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility0">
         <texture>$VAR[Overlay0Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility1">
         <texture>$VAR[Overlay1Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility2">
         <texture>$VAR[Overlay2Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility3">
         <texture>$VAR[Overlay3Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility4">
         <texture>$VAR[Overlay4Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility5">
         <texture>$VAR[Overlay5Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility6">
         <texture>$VAR[Overlay6Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility7">
         <texture>$VAR[Overlay7Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility8">
         <texture>$VAR[Overlay8Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="OverlayVisibility9">
         <texture>$VAR[Overlay9Var]</texture>
-        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
     </include>
     <include name="ReloadWindowOnClick">
         <onclick condition="Window.IsActive(addonbrowser)">SetProperty(activewindow,addons,home)</onclick>
