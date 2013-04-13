@@ -608,7 +608,26 @@
         </control>
     </include>
     <include name="AutoConfig">
-        <onload>Skin.ResetSettings</onload>
+		<onload>Skin.ResetSettings</onload>
+		<onload>Skin.ToggleSetting(movenowplayingwidget)</onload>
+	<!--	<onload>Skin.ToggleSetting(ShelfMode)</onload>-->
+		<onload>Skin.ToggleSetting(TopBarToolTip)</onload>
+		<onload>Skin.SetBool(glasshome)</onload>
+		<onload>Skin.SetBool(nowplayingpanel)</onload>
+		<onload>Skin.SetString(panel_programs,7d000000)</onload>
+        <onload>Skin.SetString(panel_music,7d000000)</onload>
+        <onload>Skin.SetString(panel_videolibrary,7d000000)</onload>
+        <onload>Skin.SetString(panel_PVR,7d000000)</onload>
+        <onload>Skin.SetString(panel_pictures,7d000000)</onload>
+        <onload>Skin.SetString(panel_featured,7d000000)</onload>
+        <onload>Skin.SetString(panel_addons,7d000000)</onload>
+        <onload>Skin.SetString(panel_musicplaylist,7d000000)</onload>
+        <onload>Skin.SetString(panel_videoplaylist,7d000000)</onload>
+        <onload>Skin.SetString(panel_mainmenu,f2000000)</onload>
+        <onload>Skin.SetString(panel_weather,7d000000)</onload>
+        <onload>Skin.SetString(panel_color,7d000000)</onload>
+        <onload>Skin.SetString(panel_settings,7d000000)</onload>
+		<onload>Skin.SetBool(colorpanels)</onload>
         <onload>Skin.SetString(diffuse_programs,FF6db9e5)</onload>
         <onload>Skin.SetString(diffuse_music,FF6db9e5)</onload>
         <onload>Skin.SetString(diffuse_videolibrary,FF6db9e5)</onload>
@@ -639,8 +658,6 @@
         <onload>Skin.SetString(LibraryStructure,2)</onload>
         <onload>Skin.SetBool(alternativerss)</onload>
         <onload>Skin.SetBool(colordialogs)</onload>
-        <onload>Skin.SetBool(DisableGlowbar)</onload>
-        <onload>Skin.SetBool(ExtendedGlowMode)</onload>
         <onload>Skin.SetBool(colortext)</onload>
         <onload>Skin.SetBool(AutoScroll)</onload>
         <onload>Skin.SetBool(breadcrumbslabel)</onload>
@@ -663,8 +680,8 @@
         <onload>Skin.SetBool(infopanellauncher)</onload>
         <onload>Skin.SetBool(MoreFullscreenInfo)</onload>
         <onload>Skin.SetBool(lowlist)</onload>
-        <onload>Skin.SetBool(lowermainmenu)</onload>
-        <onload>Skin.SetString(InfopanelDelay,2)</onload>
+        <onload>Skin.SetBool(altbreadcrumbstexture)</onload>
+        <onload>Skin.SetString(InfopanelDelay,1)</onload>
         <onload>Skin.SetString(TriPanelPosition,1)</onload>
         <onload>Skin.SetBool(GlobalNowPlaying)</onload>
         <onload>Skin.SetBool(altoverlayinfowall)</onload>
@@ -738,6 +755,99 @@
         <onload>Skin.SetString(CustomHomeItem4.Disable,1)</onload>
         <onload>Skin.SetString(CustomHomeItem5.Disable,1)</onload>
         <onload>Skin.SetString(CustomHomeItem6.Disable,1)</onload>
+        <onload>Skin.SetString(480_codeccase,special://skin/extras/iconscases/BD/480.png)</onload>
+        <onload>Skin.SetString(480Clear_codeccase,special://skin/extras/iconscases/Clear/480.png)</onload>
+        <onload>Skin.SetString(540_codeccase,special://skin/extras/iconscases/BD/540.png)</onload>
+        <onload>Skin.SetString(540Clear_codeccase,special://skin/extras/iconscases/Clear/540.png)</onload>
+        <onload>Skin.SetString(576_codeccase,special://skin/extras/iconscases/BD/576.png)</onload>
+        <onload>Skin.SetString(576Clear_codeccase,special://skin/extras/iconscases/Clear/576.png)</onload>
+        <onload>Skin.SetString(720_codeccase,special://skin/extras/iconscases/BD/720.png)</onload>
+        <onload>Skin.SetString(720Clear_codeccase,special://skin/extras/iconscases/Clear/720.png)</onload>
+        <onload>Skin.SetString(1080_codeccase,special://skin/extras/iconscases/BD/1080.png)</onload>
+        <onload>Skin.SetString(1080Clear_codeccase,special://skin/extras/iconscases/Clear/1080.png)</onload>
+        <onload>Skin.SetString(default_codeccase,special://skin/extras/iconscases/BD/default.png)</onload>
+        <onload>Skin.SetString(defaultClear_codeccase,special://skin/extras/iconscases/Clear/default.png)</onload>
+        <onload>Skin.SetString(bluray_codeccase,special://skin/extras/iconscases/BD/bluray.png)</onload>
+        <onload>Skin.SetString(blurayClear_codeccase,special://skin/extras/iconscases/Clear/bluray.png)</onload>
+        <onload>Skin.SetString(3dClear_codeccase,special://skin/extras/iconscases/Clear/bluray3d.png)</onload>
+        <onload>Skin.SetString(3d_codeccase,special://skin/extras/iconscases/BD/bluray3d.png)</onload>
+        <onload>Skin.SetString(dvClear_codeccase,special://skin/extras/iconscases/Clear/div2.png)</onload>
+        <onload>Skin.SetString(dv_codeccase,special://skin/extras/iconscases/BD/div2.png)</onload>
+        <onload>Skin.SetString(dvdClear_codeccase,special://skin/extras/iconscases/Clear/dvd.png)</onload>
+        <onload>Skin.SetString(dvd_codeccase,special://skin/extras/iconscases/BD/dvd.png)</onload>
+        <onload>Skin.SetString(h264Clear_codeccase,special://skin/extras/iconscases/Clear/h264.png)</onload>
+        <onload>Skin.SetString(h264_codeccase,special://skin/extras/iconscases/BD/h264.png)</onload>
+        <onload>Skin.SetString(hddvdClear_codeccase,special://skin/extras/iconscases/Clear/hddvd.png)</onload>
+        <onload>Skin.SetString(hddvd_codeccase,special://skin/extras/iconscases/BD/hddvd.png)</onload>
+        <onload>Skin.SetString(mkvClear_codeccase,special://skin/extras/iconscases/Clear/mkv.png)</onload>
+        <onload>Skin.SetString(mkv_codeccase,special://skin/extras/iconscases/BD/mkv.png)</onload>
+        <onload>Skin.SetString(movClear_codeccase,special://skin/extras/iconscases/Clear/mov.png)</onload>
+        <onload>Skin.SetString(mov_codeccase,special://skin/extras/iconscases/BD/mov.png)</onload>
+        <onload>Skin.SetString(mp4Clear_codeccase,special://skin/extras/iconscases/Clear/mp4.png)</onload>
+        <onload>Skin.SetString(mp4_codeccase,special://skin/extras/iconscases/BD/mp42.png)</onload>
+        <onload>Skin.SetString(mpegClear_codeccase,special://skin/extras/iconscases/Clear/mpeg1video.png)</onload>
+        <onload>Skin.SetString(mpeg_codeccase,special://skin/extras/iconscases/BD/mpeg1video.png)</onload>
+		<onload>Skin.SetString(QtClear_codeccase,special://skin/extras/iconscases/Clear/quicktime.png)</onload>
+        <onload>Skin.SetString(Qt_codeccase,special://skin/extras/iconscases/BD/quicktime.png)</onload>
+        <onload>Skin.SetString(TVseriesClear_codeccase,special://skin/extras/iconscases/Clear/tv.png)</onload>
+        <onload>Skin.SetString(TVseries_codeccase,special://skin/extras/iconscases/BD/tv.png)</onload>
+        <onload>Skin.SetString(MusicVideoClear_codeccase,special://skin/extras/iconscases/Clear/music.png)</onload>
+        <onload>Skin.SetString(MusicVideo_codeccase,special://skin/extras/iconscases/BD/music.png)</onload>
+        <onload>Skin.SetString(wmvClear_codeccase,special://skin/extras/iconscases/Clear/wmv.png)</onload>
+        <onload>Skin.SetString(wmv_codeccase,special://skin/extras/iconscases/BD/wmv2.png)</onload>
+        <onload>Skin.SetString(xvidClear_codeccase,special://skin/extras/iconscases/Clear/xvid.png)</onload>
+        <onload>Skin.SetString(xvid_codeccase,special://skin/extras/iconscases/BD/xvid.png)</onload>
+        <onload>Skin.SetString(aviClear_codeccase,special://skin/extras/iconscases/Clear/avi.png)</onload>
+        <onload>Skin.SetString(avi_codeccase,special://skin/extras/iconscases/BD/avi.png)</onload>
+        <onload>Skin.SetString(isoClear_codeccase,special://skin/extras/iconscases/Clear/iso.png)</onload>
+        <onload>Skin.SetString(iso_codeccase,special://skin/extras/iconscases/BD/iso.png)</onload>
+        <onload>Skin.SetString(480_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clear480_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(540_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clear540_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(576_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clear576_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(720_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clear720_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(1080_colorcase,FF1767c1)</onload>
+        <onload>Skin.SetString(Clear1080_colorcase,FF1767c1)</onload>
+        <onload>Skin.SetString(default_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Cleardefault_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(bluray_colorcase,FF1767c1)</onload>
+        <onload>Skin.SetString(Clearbluray_colorcase,FF1767c1)</onload>
+        <onload>Skin.SetString(3d_colorcase,FF1767c1)</onload> 
+        <onload>Skin.SetString(Clear3d_colorcase,FF1767c1)</onload> 
+        <onload>Skin.SetString(dv_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Cleardv_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(dvd_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Cleardvd_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(h264_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearh264_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(hddvd_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearhddvd_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(mkv_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearmkv_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(mov_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearmov_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(mp4_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearmp4_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(mpeg_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearmpeg_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Qt_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(ClearQt_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(TVseries_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(ClearTVseries_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Music_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(ClearMusic_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(wmv_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearwmv_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(xvid_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearxvid_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(avi_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Clearavi_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(iso_colorcase,FF484848)</onload>
+        <onload>Skin.SetString(Cleariso_colorcase,FF484848)</onload>
+        <onload>Skin.SetBool(GlassRun.2.1)</onload>
         <onload>Skin.SetBool(firstrun4.0)</onload>
     </include>
     <include name="DelayAnimations">
